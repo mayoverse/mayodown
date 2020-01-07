@@ -35,7 +35,9 @@
 
 
 <meta property="og:title" content="Create and open a Mayo themed Rmd file — use_mayodocx" />
-<meta property="og:description" content="Create a Mayo themed Rmd file to render to either word, html or xaringan::moon_reader.  If the usethis packages is installed and RStudio is in use, the file will be opened in the text editor." />
+<meta property="og:description" content="Create a Mayo themed Rmd file to render to either word, html or
+xaringan::moon_reader.  If the usethis packages is installed and
+RStudio is in use, the file will be opened in the text editor." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -127,10 +129,12 @@
     </div>
 
     <div class="ref-description">
-    <p>Create a Mayo themed Rmd file to render to either word, html or xaringan::moon_reader.  If the usethis packages is installed and RStudio is in use, the file will be opened in the text editor.</p>
+    <p>Create a Mayo themed Rmd file to render to either word, html or
+xaringan::moon_reader.  If the usethis packages is installed and
+RStudio is in use, the file will be opened in the text editor.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>use_mayodocx</span>(<span class='no'>name</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+    <pre class="usage"><span class='fu'>use_mayodocx</span>(<span class='no'>name</span>, <span class='kw'>blank</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
 
 <span class='fu'>use_mayohtml</span>(<span class='no'>name</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
 
@@ -142,6 +146,11 @@
     <tr>
       <th>name</th>
       <td><p>file, or file path, for the generated markdown file.</p></td>
+    </tr>
+    <tr>
+      <th>blank</th>
+      <td><p>logical; should a blank word template be used? If false,
+If FALSE, a memo format will be used</p></td>
     </tr>
     <tr>
       <th>overwrite</th>
