@@ -1,8 +1,8 @@
 pandoc: '2.2'
-pkgdown: 1.4.1
+pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   mayodocx: mayodocx.html
   mayohtml: mayohtml.html
-  moon_reader: moon_reader.html
+last_built: 2021-03-28T14:28Z
 

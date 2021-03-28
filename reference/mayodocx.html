@@ -35,7 +35,8 @@
 
 
 <meta property="og:title" content="A mayo themed docx format — mayodocx" />
-<meta property="og:description" content="A mayo themed docx format" />
+<meta property="og:description" content="Format for converting from R Markdown to MS Word
+based on rdocx_document." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -53,7 +54,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -67,7 +68,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mayodown</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1.0</span>
       </span>
     </div>
 
@@ -75,7 +76,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -95,16 +96,13 @@
     <li>
       <a href="../articles/mayohtml.html">Creating a Mayo-Themed HTML file</a>
     </li>
-    <li>
-      <a href="../articles/moon_reader.html">Creating a Mayo-Themed remark.js presentation</a>
-    </li>
   </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/mayoverse/mayodown">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/mayoverse/mayodown/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -127,70 +125,27 @@
     </div>
 
     <div class="ref-description">
-    <p>A mayo themed docx format</p>
+    <p>Format for converting from R Markdown to MS Word
+based on <a href='https://davidgohel.github.io/officedown/reference/rdocx_document.html'>rdocx_document</a>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>mayodocx</span>(
-  <span class='no'>mapstyles</span>,
-  <span class='kw'>header</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>contact</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>greeting</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>in_contact</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(),
-  <span class='kw'>in_greeting</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(),
-  <span class='kw'>reference_docx</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='no'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>mayodocx</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>mapstyles</th>
-      <td><p>a named list of style to be replaced in the generated</p></td>
-    </tr>
-    <tr>
-      <th>header</th>
-      <td><p>logical; should the Mayo header logo be included?</p></td>
-    </tr>
-    <tr>
-      <th>contact</th>
-      <td><p>logical; should the contact section be included?</p></td>
-    </tr>
-    <tr>
-      <th>greeting</th>
-      <td><p>logical; should the greeting section be included?</p></td>
-    </tr>
-    <tr>
-      <th>in_contact</th>
-      <td><p>Named list of arguments to for the contact section.
-Can inlude <code>person</code>, <code>department</code>, <code>location</code>, <code>ext</code>, and <code>email</code>.
-These options can be set globaly in .Rprofile.</p></td>
-    </tr>
-    <tr>
-      <th>in_greeting</th>
-      <td><p>Named list of arguments for the greeting section.
-Can inlude <code>from</code>, <code>to</code>, and <code>re</code>.</p></td>
-    </tr>
-    <tr>
-      <th>reference_docx</th>
-      <td><p>Use the specified file as a style reference
-in producing a docx file.  If left unused,
-a default template from the mayodown package will be used.</p></td>
-    </tr>
-    <tr>
       <th>...</th>
-      <td><p>arguments used by <a href='https://rdrr.io/pkg/rmarkdown/man/word_document.html'>word_document</a></p></td>
+      <td><p>arguments used by <a href='https://pkgs.rstudio.com/rmarkdown/reference/word_document.html'>word_document</a></p></td>
     </tr>
     </table>
 
 
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -201,7 +156,7 @@ a default template from the mayodown package will be used.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

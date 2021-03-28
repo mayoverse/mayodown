@@ -55,7 +55,7 @@ RStudio is in use, the file will be opened in the text editor." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +69,7 @@ RStudio is in use, the file will be opened in the text editor." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mayodown</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1.0</span>
       </span>
     </div>
 
@@ -77,7 +77,7 @@ RStudio is in use, the file will be opened in the text editor." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -97,16 +97,13 @@ RStudio is in use, the file will be opened in the text editor." />
     <li>
       <a href="../articles/mayohtml.html">Creating a Mayo-Themed HTML file</a>
     </li>
-    <li>
-      <a href="../articles/moon_reader.html">Creating a Mayo-Themed remark.js presentation</a>
-    </li>
   </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/mayoverse/mayodown">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/mayoverse/mayodown/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -134,11 +131,11 @@ xaringan::moon_reader.  If the usethis packages is installed and
 RStudio is in use, the file will be opened in the text editor.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>use_mayodocx</span>(<span class='no'>name</span>, <span class='kw'>blank</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+    <pre class="usage"><span class='fu'>use_mayodocx</span><span class='op'>(</span><span class='va'>name</span>, overwrite <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 
-<span class='fu'>use_mayohtml</span>(<span class='no'>name</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+<span class='fu'>use_mayohtml</span><span class='op'>(</span><span class='va'>name</span>, overwrite <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 
-<span class='fu'>use_mayomoon_reader</span>(<span class='no'>name</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+<span class='fu'>use_mayomoon_reader</span><span class='op'>(</span><span class='va'>name</span>, overwrite <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -148,11 +145,6 @@ RStudio is in use, the file will be opened in the text editor.</p>
       <td><p>file, or file path, for the generated markdown file.</p></td>
     </tr>
     <tr>
-      <th>blank</th>
-      <td><p>logical; should a blank word template be used? If false,
-If FALSE, a memo format will be used</p></td>
-    </tr>
-    <tr>
       <th>overwrite</th>
       <td><p>logical; should existing destination files be overwritten?</p></td>
     </tr>
@@ -160,19 +152,17 @@ If FALSE, a memo format will be used</p></td>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'>use_mayodocx</span>(<span class='st'>"test_mayodocx"</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='fu'>use_mayohtml</span>(<span class='st'>"test_mayohtml"</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='fu'>use_mayomoon_reader</span>(<span class='st'>"test_xaringan"</span>, <span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-}</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>use_mayodocx</span><span class='op'>(</span><span class='st'>"test_mayodocx"</span>, overwrite <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='fu'>use_mayohtml</span><span class='op'>(</span><span class='st'>"test_mayohtml"</span>, overwrite <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='fu'>use_mayomoon_reader</span><span class='op'>(</span><span class='st'>"test_xaringan"</span>, overwrite <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -183,7 +173,7 @@ If FALSE, a memo format will be used</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

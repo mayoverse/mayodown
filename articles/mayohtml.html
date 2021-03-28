@@ -12,14 +12,14 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><link href="../mayotemplate-2.css" rel="stylesheet">
 <meta property="og:title" content="Creating a Mayo-Themed HTML file">
-<meta property="og:description" content="">
+<meta property="og:description" content="mayodown">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">mayodown</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1.0</span>
       </span>
     </div>
 
@@ -40,7 +40,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -60,16 +60,13 @@
     <li>
       <a href="../articles/mayohtml.html">Creating a Mayo-Themed HTML file</a>
     </li>
-    <li>
-      <a href="../articles/moon_reader.html">Creating a Mayo-Themed remark.js presentation</a>
-    </li>
   </ul>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/mayoverse/mayodown">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/mayoverse/mayodown/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -86,9 +83,9 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Creating a Mayo-Themed HTML file</h1>
+      <h1 data-toc-skip>Creating a Mayo-Themed HTML file</h1>
             
-            <h4 class="date">2020-03-13</h4>
+            <h4 class="date">2021-03-28</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/mayoverse/mayodown/blob/master/vignettes/mayohtml.Rmd"><code>vignettes/mayohtml.Rmd</code></a></small>
       <div class="hidden name"><code>mayohtml.Rmd</code></div>
@@ -109,15 +106,13 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="ot">---</span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">"Mayo-Themed Rmarkdown"</span></a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"><span class="fu">author:</span><span class="at"> First Last</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="fu">date:</span><span class="at"> </span><span class="st">"13 March, 2020"</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="fu">date:</span><span class="at"> </span><span class="st">"28 March, 2021"</span></a>
 <a class="sourceLine" id="cb1-5" data-line-number="5"><span class="fu">output:</span><span class="at"> mayodown::mayohtml</span></a>
 <a class="sourceLine" id="cb1-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
 </div>
 <div id="sample-output" class="section level1">
 <h1 class="hasAnchor">
 <a href="#sample-output" class="anchor"></a>Sample output</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">htmltools<span class="op">::</span>tags<span class="op">$</span><span class="kw">iframe</span>(<span class="dt">src =</span> <span class="st">"html_example.html"</span>)</a></code></pre></div>
-<iframe src="html_example.html"></iframe>
 <div class="embed-responsive embed-responsive-16by9 shadow">
 <iframe class="embed-responsive-item" align="center" width="100%" height="600px" allow="fullscreen" src="html_example.html#zoom=133"></iframe>
 </div>
@@ -125,32 +120,25 @@
 <div id="additional-arguments" class="section level1">
 <h1 class="hasAnchor">
 <a href="#additional-arguments" class="anchor"></a>Additional Arguments</h1>
-<p><code><a href="../reference/mayohtml.html">mayodown::mayohtml</a></code> uses the same core rendering engine as <code><a href="https://rdrr.io/pkg/rmarkdown/man/html_document.html">rmarkdown::html_document</a></code> and can be passed the same parameters. Some parameters have different default values set, however.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">"Mayo-Themed Rmarkdown"</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="fu">author:</span><span class="at"> First Last</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="fu">date:</span><span class="at"> </span><span class="st">"13 March, 2020"</span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="fu">output:</span><span class="at"> </span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6">  <span class="fu">mayodown:</span><span class="at">:mayohtml:</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">    <span class="fu">toc:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb3-8" data-line-number="8">    <span class="fu">toc_float:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9">    <span class="fu">toc_depth:</span><span class="at"> 2</span></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="ot">---</span></a></code></pre></div>
+<p><code><a href="../reference/mayohtml.html">mayodown::mayohtml</a></code> uses the same core rendering engine as <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/html_document.html">rmarkdown::html_document</a></code> and can be passed the same parameters. Some parameters have different default values set, however.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">"Mayo-Themed Rmarkdown"</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="fu">author:</span><span class="at"> First Last</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="fu">date:</span><span class="at"> </span><span class="st">"28 March, 2021"</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="fu">output:</span><span class="at"> </span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">  <span class="fu">mayodown:</span><span class="at">:mayohtml:</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">    <span class="fu">toc:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">    <span class="fu">toc_float:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">    <span class="fu">toc_depth:</span><span class="at"> 2</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="ot">---</span></a></code></pre></div>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#basic-usage">Basic Usage</a></li>
-      <li><a href="#sample-output">Sample output</a></li>
-      <li><a href="#additional-arguments">Additional Arguments</a></li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
@@ -161,7 +149,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
