@@ -32,7 +32,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">mayodown</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1.1</span>
       </span>
     </div>
 
@@ -102,19 +102,20 @@
 <p><code>mayodown</code> supports the following outputs:</p>
 <ul>
 <li><p>HTML document (based on <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/html_document.html">rmarkdown::html_document</a></code>)</p></li>
-<li><p>Microsoft Word document (based on <code>officedown</code>)</p></li>
+<li><p>Microsoft Word document (based on <code><a href="https://davidgohel.github.io/officedown/reference/rdocx_document.html">officedown::rdocx_document</a></code>)</p></li>
 <li><p>remark.js slide presentation (based on <code><a href="https://rdrr.io/pkg/xaringan/man/moon_reader.html">xaringan::moon_reader</a></code>)</p></li>
+<li><p>Beamer slides (based on <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/beamer_presentation.html">rmarkdown::beamer_presentation</a></code>)</p></li>
+<li><p>ioslides (based on <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/ioslides_presentation.html">rmarkdown::ioslides_presentation</a></code>)</p></li>
 </ul>
-<p>Please contact the authors if additional formats are needed.</p>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>To use, simply use the <code>mayohtml</code>, <code>mayodocx</code>, or <code>mayomoon_reader</code> engine in your R Markdown header. For example:</p>
+<p>To use, simply use the <code>mayohtml</code>, <code>mayodocx</code>, or <code>mayomoon_reader</code>, <code>mayoioslides</code>, or <code>mayobeamer</code> engine in your R Markdown header. For example:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="ot">---</span></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">"Mayo-Themed Rmarkdown"</span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="fu">author:</span><span class="at"> First Last</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="fu">date:</span><span class="at"> </span><span class="st">"12 March, 2020"</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="fu">date:</span><span class="at"> </span><span class="st">"28 March, 2021"</span></a>
 <a class="sourceLine" id="cb2-5" data-line-number="5"><span class="fu">output:</span><span class="at"> mayodown::mayohtml</span></a>
 <a class="sourceLine" id="cb2-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
 <p>For more details along with examples, see the vignettes.</p>
